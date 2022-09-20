@@ -81,7 +81,7 @@ def start():
 	else:
 		os.system('cls')
 		print(logo)
-		print("\n\nThank you for playing Blackjack :)")
+		print("\n\nThank you for playing Blackjack  :)")
 start()
 
 
