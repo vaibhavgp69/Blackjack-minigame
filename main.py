@@ -18,6 +18,7 @@ def print_results(ply_cards,comp_cards):
 def game():
 	os.system('cls')
 	k=0
+	h=0
 	print(logo)
 	comp_cards=random.choices(cards,k=2)
 	ply_cards=random.choices(cards,k=2)
@@ -52,14 +53,15 @@ def game():
 		print_results(ply_cards,comp_cards)
 		
 	elif (sum(ply_cards)==sum(comp_cards)):
-		print("\n\nDraw")
+		print("\n\nDraw 😔")
 		print_results(ply_cards,comp_cards)
 		
 	elif(sum(ply_cards)==21) and k!=1:
 		print("\n\nYou win with a BlackJack 😌/ayo\😌")
-		print_results(ply_cards,comp_cards)		
+		print_results(ply_cards,comp_cards)	
+		h=1	
 	
-	elif (sum(comp_cards))>21 :
+	elif (sum(comp_cards))>21 and k==0 and h==0 :
 		print("\n\nYou win , computer overpulled 😌")
 		print_results(ply_cards,comp_cards)
 
@@ -83,10 +85,3 @@ def start():
 		print(logo)
 		print("\n\nThank you for playing Blackjack  :)")
 start()
-
-
-
-
-
-
-
