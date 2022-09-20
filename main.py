@@ -18,7 +18,7 @@ def print_results(ply_cards,comp_cards):
 def game():
 	os.system('cls')
 	k=0
-	print(art.logo())
+	print(logo)
 	comp_cards=random.choices(cards,k=2)
 	ply_cards=random.choices(cards,k=2)
 	print(f"\n\n\nYour cards: {ply_cards} , current score : {sum(ply_cards)}")
@@ -80,7 +80,7 @@ def start():
 	 	game()
 	else:
 		os.system('cls')
-		print(art.logo())
+		print(logo)
 		print("\n\nThank you for playing Blackjack :)")
 start()
 
